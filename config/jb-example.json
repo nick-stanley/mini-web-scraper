@@ -1,0 +1,28 @@
+[
+  {
+    "url": "https://www.jbhifi.com.au/products/nintendo-switch-crash-team-racing-nitro-fueled",
+    "elements": [
+      {
+        "selector": "[property='og:title']",
+        "attribute": "content"
+      },
+      {
+        "selector": "[property='og:price:amount']",
+        "attribute": "content"
+      }
+    ]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/products/nintendo-switch-crash-bandicoot-4-its-about-time",
+    "elements": [
+      {
+        "selector": "[property='og:title']",
+        "attribute": "content"
+      },
+      {
+        "selector": "[property='og:price:amount']",
+        "attribute": "content"
+      }
+    ]
+  }
+]

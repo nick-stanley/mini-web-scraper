@@ -1,0 +1,20 @@
+{
+  "name": "mini-web-scraper",
+  "version": "1.0.0",
+  "description": "Add simple configuration files to scrape data from websites.",
+  "main": "src/index.ts",
+  "author": "Nick S",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "puppeteer": "^16.2.0",
+    "zod": "^3.18.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  }
+}

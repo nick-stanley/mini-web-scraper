@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://shop.coles.com.au/a/national/product/beyond-mince-",
+    "elements": [
+      {
+        "selector": "[property='og:title']",
+        "attribute": "content"
+      },
+      {
+        "selector": ".price-container"
+      }
+    ]
+  }
+]
