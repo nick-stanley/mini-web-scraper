@@ -2,9 +2,14 @@
 
 Add simple configuration files to scrape data from websites.
 
-Run these configuration files by running `node dist/index.js` from the command line from the project's root directory, or by opening [start.bat](./start.bat) if using Windows.
+## Installation
 
-Requires [Node.js](https://nodejs.org/en/).
+1. Install [Node.js](https://nodejs.org/en/).
+2. Run `npm run build` from the project's root directory or open [install.bat](./install.bat) if using Windows.
+
+## Run
+
+Execute the configuration files in [config](./config/) by running `npm run start` from the command line from the project's root directory or by opening [start.bat](./start.bat) if using Windows.
 
 ## Configuration files
 
