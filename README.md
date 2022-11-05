@@ -11,6 +11,8 @@ Add simple configuration files to scrape data from websites.
 
 Execute the configuration files in [config](./config/) by running `npm run start` from the command line from the project's root directory or by opening [start.bat](./start.bat) if using Windows.
 
+You can run specific configuration files by running `npm run start filename`, where `filename` is the name of the configuration file you want to run. This argument is case insensitive and can match multiple files.
+
 ## Configuration files
 
 Add configuration files to the [config](./config) directory.
@@ -50,10 +52,32 @@ type ScraperConfig = {
 type ScraperElement = {
   selector: string;
   attribute?: string;
+  multiple?: boolean;
+  elements?: ScraperElement[];
+  before?: string;
+  after?: string;
 };
 ```
 
 Each config must have `url` and `elements`. Each element must have a `selector` but has an optional `attribute`. By default, if an element is found with the provided `selector`, its [textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) is returned. If an attribute is provided, the value for that attribute is returned instead.
+
+## ScraperElement
+
+### "multiple"
+
+If `true`, will return all instances of the specific selector. If `false` or `undefined`, will return the first instance found.
+
+### "elements"
+
+If provided, "attribute" will be ignored and elements within the current selector will be used to find the desired data. "elements" is recursive and will keep traversing until a level is found where no "elements" value is provided, and the value for the selector provided at that level will be returned.
+
+### "before"
+
+If provided, will be added before the returned data.
+
+### "after"
+
+If provided, will be added after the returned data.
 
 ## Selectors
 

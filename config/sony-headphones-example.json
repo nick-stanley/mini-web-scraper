@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://www.jbhifi.com.au/products/sony-wh-1000xm4-wireless-noise-cancelling-over-ear-headphones-black",
+    "elements": [
+      {
+        "selector": "[property='og:title']",
+        "attribute": "content",
+        "after": ", "
+      },
+      {
+        "selector": "[property='og:price:amount']",
+        "attribute": "content"
+      }
+    ]
+  },
+  {
+    "url": "https://www.ozbargain.com.au/product/sony-wh-1000xm4",
+    "elements": [
+      {
+        "selector": ".node:not(.expired):not(.soldout)",
+        "multiple": true,
+        "elements": [
+          {
+            "selector": "[data-title]",
+            "attribute": "data-title",
+            "before": "\n"
+          }
+        ]
+      }
+    ]
+  }
+]

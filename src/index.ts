@@ -1,3 +1,5 @@
 import { scraper } from './scraper';
 
-scraper();
+const input = process.argv[2]?.trim();
+
+scraper(input);

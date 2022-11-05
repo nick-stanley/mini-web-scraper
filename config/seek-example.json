@@ -1,0 +1,31 @@
+[
+  {
+    "url": "https://www.seek.com.au/warehouse-storeperson-jobs/in-Brisbane-CBD-&-Inner-Suburbs-Brisbane-QLD",
+    "elements": [
+      {
+        "selector": "[data-job-id]",
+        "multiple": true,
+        "elements": [
+          {
+            "selector": "[data-automation='jobTitle']",
+            "before": "\n"
+          },
+          {
+            "selector": "[data-automation='jobLocation']",
+            "before": ", "
+          },
+          {
+            "selector": "[data-automation='jobListingDate']",
+            "before": ", "
+          },
+          {
+            "selector": "[data-automation='jobTitle']",
+            "attribute": "href",
+            "before": "\n",
+            "after": "\n"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -4,7 +4,8 @@
     "elements": [
       {
         "selector": "[property='og:title']",
-        "attribute": "content"
+        "attribute": "content",
+        "after": ", "
       },
       {
         "selector": "[property='og:price:amount']",
@@ -17,7 +18,8 @@
     "elements": [
       {
         "selector": "[property='og:title']",
-        "attribute": "content"
+        "attribute": "content",
+        "after": ", "
       },
       {
         "selector": "[property='og:price:amount']",
