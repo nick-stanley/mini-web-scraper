@@ -11,26 +11,26 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-export const scraper = async (input?: string) => {
-  const pattern = input ? new RegExp(input, 'i') : null;
+export const scraper = async (inputs: string[]) => {
+  const pattern = inputs.length > 0 ? new RegExp(inputs.join('|'), 'i') : null;
   const scraperFiles = await getScraperFiles(pattern);
-  if (!scraperFiles.length) return handleNoFiles(input);
+  if (!scraperFiles.length) return handleNoFiles(inputs);
   const pages = await getPages(scraperFiles);
   const values = await processPages(pages);
   console.log('\n');
   console.log(values.join('\n'));
-  promptRunAgain(input);
+  promptRunAgain(inputs);
 };
 
-function handleNoFiles(input?: string) {
-  const forInputMessage = input ? ` for input: ${input}` : '';
+function handleNoFiles(inputs: string[]) {
+  const forInputMessage = inputs.length > 0 ? ` for inputs: ${inputs.join(' ')}` : '';
   console.log(`\nNo config files found${forInputMessage}`);
   process.exit(0);
 }
 
-async function promptRunAgain(input?: string) {
+async function promptRunAgain(inputs: string[]) {
   const answer = await question('\nRun again? (y/n)');
-  if (answer.toLowerCase() === 'y') return scraper(input);
+  if (answer.toLowerCase() === 'y') return scraper(inputs);
   process.exit(0);
 }
 
